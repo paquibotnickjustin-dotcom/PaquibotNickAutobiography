@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>About</title>
+    <link rel="stylesheet" href="IA.css" />
+    <style>
+        *{
+    text-decoration: none;
+
+}
+
+body {
+    margin: 0;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background-image: url(Images/Background\ Picture.jfif);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    z-index: -1;
+}
+
+h1{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.navbar {
+    position: sticky;   
+    top: 0;
+    z-index: 1000;      
+    background: #FAD5A5; 
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding-left: 15px;
+    padding-right: 15px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    border-bottom: 2px solid brown;
+}
+
+.navdiv{
+    display: flex;
+    align-items: right;
+    justify-content: space-between;
+    padding: 0 30px;
+}
+
+.logo{
+    font-size: 35px;
+    font-weight: 600;
+    color: blue;
+}
+
+li{
+    list-style: none;
+    display: inline-block;
+}
+
+li a{
+    color: blue;
+    font-size: 18px;
+    font-weight: bold;
+    margin-right: 25px;
+}
+
+ul{
+    justify-content: right;
+    align-items: right;
+    text-align: right;
+}
+
+.about-container {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #FAD5A5;  
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+}
+
+.favorites-container {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #FAD5A5;  
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+}
+
+.education-container {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #FAD5A5;  
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+}
+
+.section {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.section-img {
+    display: block;
+    margin: 0 auto 15px auto;
+    width: 250px; 
+    height: 100px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    min-width: 250px;
+    min-height: 200px;
+}
+
+.section p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+img {
+    min-width: 250px;
+    min-height: 200px;
+}
+
+.contacts {
+    font-size: 24px;
+    font-weight: bold;
+    color: #0056b3; 
+    display: inline-block;
+    margin: 10px 0;
+    position: relative;
+}
+
+.contacts:hover {
+    color: #ff6600; 
+    text-decoration: underline;
+}
+
+.contacts::after {
+    content: attr(href);
+    position: absolute;
+    bottom: -25px;
+    left: 0;
+    font-size: 12px;
+    color: #666;
+    background: #fff;
+    border: 1px solid #ccc;
+    padding: 3px 6px;
+    border-radius: 4px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    white-space: nowrap;
+    z-index: 10;
+}
+
+.contacts:hover::after {
+    opacity: 1;
+}
+
+.sticky-footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #FAD5A5;
+    color: #333;
+    text-align: center;
+    padding: 1px 0;
+    font-size: 8px;
+    box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1);
+    z-index: 999;
+    border-top: 2px solid brown;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; 
+    gap: 150px; 
+    margin-top: 5px;
+}
+
+.footer-contact {
+    color: #0056b3;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-contact:hover {
+    color: #ff6600;
+    text-decoration: underline;
+}
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navdiv">
+            <div class="logo"><a href="index.html">Autobiography</a></div>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#favorites">Favorites</a></li>
+                <li><a href="#education">Education</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <h1 id="about">About Me</h1>
+    <div class="container about-container">
+        <section class="section">
+            <img src="Images/Nick Picture.jfif" alt="Portrait of Nick" class="section-image" />
+            <p>
+                Hello! My name is Nick Justin B. Paquibot, and this is the story of my life...
+                I am an aspiring IT/Geology student studying here in Lapu-Lapu City College.
+                Now why is there a "/Geology" on that sentence? It's because aside from being
+                an IT student, a piece of me is also interested in Geology, also known as the 
+                study of rocks and minerals.
+            </p> <br>
+        </section>
+
+        <section class="section">
+            <img src="Images/LLCC Picture.jfif" alt="LLCC Picture" class="section-image" />
+            <p>
+                I am currently 18 years old, born here in the City of East, aka Lapu-Lapu City.
+                I consider myself as an adventurous type of student, but aside from that, I am
+                also the type of student who is indecisive. What I noticed about me is that 
+                apart from all my strengths, there are always weaknesses that are ready to hinder
+                my strengths.
+            </p> <br>
+        </section>
+
+        <section class="section">
+            <img src="Images/Studying Picture.jfif" alt="Studying Picture" class="section-image" />
+            <p> 
+                Now... why am I making this autobiography? As a student, it is our goal to caress
+                and take care of our grades, not just for myself, but for my future. If I want to
+                have a good future, I should start on improving and being the best me. School may
+                sometimes be considered a hindrance on some of our personal stuff, but trust me,
+                here is where we develop different sets of skills that we may not hone on our own,
+                this place is where we prepare for the future.
+            </p>
+        </section>
+    </div>
+
+    <h1 id="favorites">Interests and Favorites</h1>
+    <div class="container favorites-container">
+        <section class="section">
+            <img src="Images/Gaming Picture.jfif" alt="Gaming Picture" class="section-image" />
+            <p>
+                Even though I'm already at the age of 18, playing games is still part of my life.
+                I play different games like MLBB, Roblox, Minecraft, etc. I use gaming as a way
+                to cope with stresses in personal life, education, everything about stress. I consider
+                gaming as a way to cure stress and problems.
+            </p> <br>
+        </section>
+
+        <section class="section">
+            <img src="Images/Gardening Picture.jfif" alt="Gardening Picture" class="section-image" />
+            <p>
+                One thing I love that might not be expected about me is gardening. For me it just
+                feels like it, I adore nature, and I also do hope that nature adores me. Taking care 
+                of it feels just "IT", I don't know how to explain it, but I just love to see it grow
+                while I take care of it.
+            </p> <br>
+        </section>
+
+        <section class="section">
+            <img src="Images/Geology Picture.jfif" alt="Geology Picture" class="section-image" />
+            <p>
+                I already mentioned this in the About section, GEOLOGY! This interest is very random;
+                it arose when I was in 11th grade. I fell in love with the activity of studying rocks 
+                and minerals, venturing in caves and such.
+            </p>
+        </section>
+    </div>
+
+    <h1 id="education">Education</h1>
+    <div class="container education-container">
+        <section class="section">
+            <img src="Images/SHS School Picture.jfif" alt="SHS School Picture" class="section-image" /> 
+            <p>
+                As a student, one of my goals is to finish school with flying colors, and to finish it 
+                with flying colors, I would do good in all activities. Some may call me "smart", but 
+                for me I still am not. My mind had already set the meaning of being smart when I studied
+                at STEC. In that school, everything is advanced. At first, it was very fast for me, considering
+                that when I was still studying at MNHS for my JHS it was too chill. And the SHS experience hit
+                me with a culture shock, which made me the person who I am right now. 
+            </p> <br>
+
+            <img src="Images/College School Picture.jfif" alt="College School Picture" class="section-image" />
+            <p>
+                When I arrived in LLCC, it also hit me with another culture shock, which was the realization
+                of how different college compared with SHS. The first day was rough for me, since I did not know 
+                anyone in the class, and I'm glad that after a few weeks, I found new peers and am also comfortable in 
+                the new environment. 
+            </p>
+        </section>
+    </div>
+
+    <footer class="sticky-footer">
+        <div class="footer-content">
+            <div class="footer-links">
+                <a class="contacts" href="https://www.facebook.com/nick.justin.paquibot" target="_blank">Facebook</a>
+                <a class="contacts" href="https://www.instagram.com/" target="_blank">Instagram</a>
+                <a class="contacts" href="https://www.roblox.com/users/2064345597/profile" target="_blank">Roblox</a>
+                <a class="contacts" href="mailto:nickjuspaquibot@gmail.com">Gmail</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
